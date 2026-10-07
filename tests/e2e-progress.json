@@ -1,0 +1,15 @@
+{
+  "environment": "Dify CE 1.17.1, plugin daemon 0.6.10-local, official remote debug, signature verification enabled",
+  "marketplace_install_tested": false,
+  "cases": [
+    {
+      "case": "Google Search Dify E2E",
+      "workflow_status": "succeeded",
+      "task_status": "succeeded",
+      "task_id": "",
+      "browser_ui_run": true,
+      "error": null
+    }
+  ],
+  "status": "E2E and output/billing audit in progress"
+}

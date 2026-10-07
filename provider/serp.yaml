@@ -1,0 +1,34 @@
+identity:
+  author: acedatacloud
+  name: serp
+  label:
+    en_US: Google Search
+    zh_Hans: Google Search
+    ja_JP: Google Search
+    pt_BR: Google Search
+  description:
+    en_US: Use the Ace Data Cloud Google Search APIs in Dify workflows.
+    zh_Hans: 在 Dify 工作流中使用 Ace Data Cloud Google Search API。
+  icon: icon.jpg
+  icon_dark: icon.jpg
+  tags:
+  - search
+credentials_for_provider:
+  acedata_bearer_token:
+    type: secret-input
+    required: true
+    label:
+      en_US: Ace Data Cloud Bearer Token
+      zh_Hans: Ace Data Cloud Token
+    placeholder:
+      en_US: Paste your token (without "Bearer ")
+      zh_Hans: 粘贴 Token（不需要带 Bearer）
+    help:
+      en_US: Acquire a token with access to this service from the Ace Data Cloud console.
+      zh_Hans: 从 Ace Data Cloud 控制台获取具有此服务权限的 Token。
+    url: https://platform.acedata.cloud/console/credentials
+tools:
+- tools/serp_google.yaml
+extra:
+  python:
+    source: provider/serp.py

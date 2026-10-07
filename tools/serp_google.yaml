@@ -1,0 +1,243 @@
+identity:
+  name: serp_google
+  author: acedatacloud
+  label:
+    en_US: Google SERP
+    zh_Hans: Google SERP
+description:
+  human:
+    en_US: Get structured Google SERP results via Ace Data Cloud Google SERP API.
+    zh_Hans: 通过 Ace Data Cloud Google SERP API 获取结构化 Google 搜索结果。
+  llm: Fetch structured Google search results (search/images/news/maps/places/videos).
+parameters:
+- name: page
+  type: number
+  required: false
+  label:
+    en_US: Page
+    zh_Hans: 页码
+  human_description:
+    en_US: Page number. Default is 1.
+    zh_Hans: 页码，默认 1。
+  llm_description: Page number. Default is 1.
+  form: form
+  default: 1
+- name: type
+  type: select
+  required: false
+  label:
+    en_US: Type
+    zh_Hans: 类型
+  human_description:
+    en_US: Search resource type. Default is search.
+    zh_Hans: 搜索资源类型，默认为 search。
+  llm_description: Search resource type. Default is search.
+  form: form
+  default: search
+  options:
+  - value: search
+    label:
+      en_US: search
+      zh_Hans: search
+  - value: images
+    label:
+      en_US: images
+      zh_Hans: images
+  - value: news
+    label:
+      en_US: news
+      zh_Hans: news
+  - value: maps
+    label:
+      en_US: maps
+      zh_Hans: maps
+  - value: places
+    label:
+      en_US: places
+      zh_Hans: places
+  - value: videos
+    label:
+      en_US: videos
+      zh_Hans: videos
+- name: query
+  type: string
+  required: true
+  label:
+    en_US: Query
+    zh_Hans: 关键词
+  human_description:
+    en_US: Search query string.
+    zh_Hans: 搜索关键词。
+  llm_description: Search query string.
+  form: llm
+- name: range
+  type: select
+  required: false
+  label:
+    en_US: Date Range
+    zh_Hans: 时间范围
+  human_description:
+    en_US: Date range constraint of the search results.
+    zh_Hans: 搜索结果的时间范围限制。
+  llm_description: Date range constraint of the search results.
+  form: form
+  options:
+  - value: h
+    label:
+      en_US: h
+      zh_Hans: h
+  - value: d
+    label:
+      en_US: d
+      zh_Hans: d
+  - value: w
+    label:
+      en_US: w
+      zh_Hans: w
+  - value: m
+    label:
+      en_US: m
+      zh_Hans: m
+  - value: y
+    label:
+      en_US: y
+      zh_Hans: y
+  - value: qdr:h
+    label:
+      en_US: qdr:h
+      zh_Hans: qdr:h
+  - value: qdr:d
+    label:
+      en_US: qdr:d
+      zh_Hans: qdr:d
+  - value: qdr:w
+    label:
+      en_US: qdr:w
+      zh_Hans: qdr:w
+  - value: qdr:m
+    label:
+      en_US: qdr:m
+      zh_Hans: qdr:m
+  - value: qdr:y
+    label:
+      en_US: qdr:y
+      zh_Hans: qdr:y
+- name: number
+  type: number
+  required: false
+  label:
+    en_US: Number
+    zh_Hans: 数量
+  human_description:
+    en_US: Number of results per page. Default is 10.
+    zh_Hans: 每页结果数量，默认 10。
+  llm_description: Number of results per page. Default is 10.
+  form: form
+  default: 3
+- name: country
+  type: string
+  required: false
+  label:
+    en_US: Country
+    zh_Hans: 国家
+  human_description:
+    en_US: Country code (e.g., US, CN). Default is US.
+    zh_Hans: 国家简写（例如 US、CN），默认 US。
+  llm_description: Country code (e.g., US, CN). Default is US.
+  form: form
+- name: language
+  type: string
+  required: false
+  label:
+    en_US: Language
+    zh_Hans: 语言
+  human_description:
+    en_US: Language code (e.g., en, zh-CN). Default is en.
+    zh_Hans: 语言代码（例如 en、zh-CN），默认 en。
+  llm_description: Language code (e.g., en, zh-CN). Default is en.
+  form: form
+- name: image_size
+  type: select
+  required: false
+  label:
+    en_US: Image Size
+    zh_Hans: 图片大小
+  human_description:
+    en_US: Set image size.
+    zh_Hans: 图片尺寸筛选条件，仅在 `type` 为 `images` 时有效。
+  llm_description: Set image size.
+  form: form
+  options:
+  - value: large
+    label:
+      en_US: large
+      zh_Hans: large
+  - value: medium
+    label:
+      en_US: medium
+      zh_Hans: medium
+  - value: icon
+    label:
+      en_US: icon
+      zh_Hans: icon
+  - value: 2mp
+    label:
+      en_US: 2mp
+      zh_Hans: 2mp
+  - value: 4mp
+    label:
+      en_US: 4mp
+      zh_Hans: 4mp
+  - value: 6mp
+    label:
+      en_US: 6mp
+      zh_Hans: 6mp
+  - value: 8mp
+    label:
+      en_US: 8mp
+      zh_Hans: 8mp
+  - value: 10mp
+    label:
+      en_US: 10mp
+      zh_Hans: 10mp
+  - value: 12mp
+    label:
+      en_US: 12mp
+      zh_Hans: 12mp
+  - value: 15mp
+    label:
+      en_US: 15mp
+      zh_Hans: 15mp
+  - value: 20mp
+    label:
+      en_US: 20mp
+      zh_Hans: 20mp
+  - value: 40mp
+    label:
+      en_US: 40mp
+      zh_Hans: 40mp
+  - value: 70mp
+    label:
+      en_US: 70mp
+      zh_Hans: 70mp
+output_schema:
+  type: object
+  properties:
+    status:
+      type: string
+    success:
+      type: boolean
+    task_id:
+      type: string
+    trace_id:
+      type: string
+    media_urls:
+      type: array
+      items:
+        type: string
+    data: {}
+    result:
+      type: object
+extra:
+  python:
+    source: tools/serp_google.py

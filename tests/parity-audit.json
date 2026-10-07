@@ -1,0 +1,28 @@
+{
+  "backend_revision": "fa94598267a82545fb1afed6ee26bafd6cbb9ca7",
+  "mcp_revision": "f0eed10abf310824cb4c33d4944c63d3654ac95b",
+  "tools": [
+    {
+      "tool": "serp_google",
+      "method": "POST",
+      "path": "/serp/google",
+      "parameters": [
+        "page",
+        "type",
+        "query",
+        "range",
+        "number",
+        "country",
+        "language",
+        "image_size"
+      ],
+      "aliases": {},
+      "schema_source": "openapi/7753ed09-1046-46d3-ad80-cd7ff19676b5.json"
+    }
+  ],
+  "mcp_scope": "serp",
+  "notes": [
+    "Informational MCP model/action lists are represented by tool dropdowns and README capability tables.",
+    "GPT Image covers image-generation/editing/task capabilities of the broader OpenAI MCP; chat is supplied by ModelProviderDify."
+  ]
+}

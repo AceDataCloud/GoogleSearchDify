@@ -1,0 +1,135 @@
+{
+  "mcp_revision": "f0eed10abf310824cb4c33d4944c63d3654ac95b",
+  "mapping": [
+    {
+      "mcp_tool": "serp_google_search",
+      "dify_tools": [
+        "serp_google"
+      ],
+      "parameters": {
+        "query": "query",
+        "search_type": "type",
+        "country": "country",
+        "language": "language",
+        "time_range": "range",
+        "image_size": "image_size",
+        "number": "number",
+        "page": "page"
+      },
+      "unresolved": [],
+      "note": "Select the corresponding type; time_range maps to range."
+    },
+    {
+      "mcp_tool": "serp_google_images",
+      "dify_tools": [
+        "serp_google"
+      ],
+      "parameters": {
+        "query": "query",
+        "country": "country",
+        "language": "language",
+        "image_size": "image_size",
+        "number": "number",
+        "page": "page"
+      },
+      "unresolved": [],
+      "note": "Select the corresponding type; time_range maps to range."
+    },
+    {
+      "mcp_tool": "serp_google_news",
+      "dify_tools": [
+        "serp_google"
+      ],
+      "parameters": {
+        "query": "query",
+        "country": "country",
+        "language": "language",
+        "time_range": "range",
+        "number": "number",
+        "page": "page"
+      },
+      "unresolved": [],
+      "note": "Select the corresponding type; time_range maps to range."
+    },
+    {
+      "mcp_tool": "serp_google_videos",
+      "dify_tools": [
+        "serp_google"
+      ],
+      "parameters": {
+        "query": "query",
+        "country": "country",
+        "language": "language",
+        "number": "number",
+        "page": "page"
+      },
+      "unresolved": [],
+      "note": "Select the corresponding type; time_range maps to range."
+    },
+    {
+      "mcp_tool": "serp_google_places",
+      "dify_tools": [
+        "serp_google"
+      ],
+      "parameters": {
+        "query": "query",
+        "country": "country",
+        "language": "language",
+        "number": "number",
+        "page": "page"
+      },
+      "unresolved": [],
+      "note": "Select the corresponding type; time_range maps to range."
+    },
+    {
+      "mcp_tool": "serp_google_maps",
+      "dify_tools": [
+        "serp_google"
+      ],
+      "parameters": {
+        "query": "query",
+        "country": "country",
+        "language": "language",
+        "number": "number",
+        "page": "page"
+      },
+      "unresolved": [],
+      "note": "Select the corresponding type; time_range maps to range."
+    },
+    {
+      "mcp_tool": "serp_list_search_types",
+      "dify_tools": [],
+      "parameters": {},
+      "unresolved": [],
+      "note": "Model/action selectors and the API reference; informational guidance does not submit a request."
+    },
+    {
+      "mcp_tool": "serp_list_countries",
+      "dify_tools": [],
+      "parameters": {},
+      "unresolved": [],
+      "note": "Model/action selectors and the API reference; informational guidance does not submit a request."
+    },
+    {
+      "mcp_tool": "serp_list_languages",
+      "dify_tools": [],
+      "parameters": {},
+      "unresolved": [],
+      "note": "Model/action selectors and the API reference; informational guidance does not submit a request."
+    },
+    {
+      "mcp_tool": "serp_list_time_ranges",
+      "dify_tools": [],
+      "parameters": {},
+      "unresolved": [],
+      "note": "Model/action selectors and the API reference; informational guidance does not submit a request."
+    },
+    {
+      "mcp_tool": "serp_get_usage_guide",
+      "dify_tools": [],
+      "parameters": {},
+      "unresolved": [],
+      "note": "Model/action selectors and the API reference; informational guidance does not submit a request."
+    }
+  ]
+}

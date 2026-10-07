@@ -1,0 +1,58 @@
+{
+  "tested_at": "2026-10-07T06:27:28.056717+00:00",
+  "environment": "Dify CE 1.17.1 / plugin daemon 0.6.10-local",
+  "transport": "official remote-debug; signature verification true",
+  "browser_test_run": true,
+  "marketplace_install_tested": false,
+  "cloud_tested": false,
+  "cases": [
+    {
+      "case": "Google Search Dify E2E",
+      "operation": "serp_google",
+      "workflow_run_id": "b41fe7d1-d103-416b-9a74-f15f0e1af362",
+      "workflow_status": "succeeded",
+      "task_status": "succeeded",
+      "task_id": "",
+      "trace_id": "26330d42-b4d5-43b4-a68f-d8c4d2aff77b",
+      "media_urls": [],
+      "output": {
+        "cost": {
+          "amount": 0.009,
+          "currency": "credit"
+        },
+        "organic": [
+          {
+            "link": "https://docs.dify.ai/en/develop-plugin/dev-guides-and-walkthroughs/cheatsheet",
+            "position": 1,
+            "snippet": "A quick reference for Dify plugin development, covering environment setup, installation, the development process, and plugin types.",
+            "title": "Cheatsheet - Dify Docs"
+          },
+          {
+            "date": "Sep 8, 2026",
+            "link": "https://docs.dify.ai/en/develop-plugin/dev-guides-and-walkthroughs/tool-plugin",
+            "position": 2,
+            "snippet": "In this guide, a tool plugin is a complete project that includes tool provider files, functional code, and supporting structures.",
+            "title": "Tool Plugin - Dify Docs"
+          },
+          {
+            "link": "https://docs.dify.ai/en/develop-plugin/publishing/standards/contributor-covenant-code-of-conduct",
+            "position": 3,
+            "snippet": "Requirements every Dify Marketplace plugin must meet to pass review, covering quality, language, privacy, IP, maintenance, and prohibited content.",
+            "title": "Plugin Development Guidelines - Dify Docs"
+          }
+        ]
+      },
+      "billing": {
+        "id": "8d2aebca-db53-4a36-a071-7967af68ebd0",
+        "trace_id": "26330d42-b4d5-43b4-a68f-d8c4d2aff77b",
+        "status_code": 200,
+        "deducted_amount": 0.009,
+        "created_at": "2026-10-07T05:43:54.033342Z"
+      },
+      "media_verification": [],
+      "screenshot": "evidence/google-search-dify-e2e.png",
+      "workflow": "evidence/google-search-dify-e2e-workflow.json"
+    }
+  ],
+  "scope_note": "These completed cases establish the primary plugin operation. Additional exposed operations require their own case before claiming full coverage."
+}

@@ -1,0 +1,47 @@
+{
+  "tested_at": "2026-10-07T08:53:40.408047+00:00",
+  "environment": "Dify CE 1.17.1 / plugin daemon 0.6.10-local",
+  "transport": "official remote-debug; signature verification enabled",
+  "browser_test_run": true,
+  "unit_contract_tests": "25 passed, 1 warning in 0.45s",
+  "marketplace_toolkit_passed": true,
+  "package_sha256": "e456ce14c58c8d9658d1efbee30b315fa989b7d293571f6cd3970624dd7d3e40",
+  "exact_package_serverless_install_passed": true,
+  "marketplace_install_tested": false,
+  "cloud_tested": false,
+  "cases": [
+    {
+      "case": "Google Search Audit",
+      "tool": "serp_google",
+      "workflow_run_id": "c02d64ed-d5c9-4ab1-a084-7eb89c376346",
+      "workflow_status": "succeeded",
+      "service_status": "succeeded",
+      "task_id": "",
+      "trace_id": "",
+      "media_urls": [],
+      "error": null,
+      "new_submission": true,
+      "billing": [
+        {
+          "id": "814fb10d-f722-4a2e-9690-11fbbe08dfa1",
+          "trace_id": "b04c201f-a2e5-442a-9211-aabd683e6277",
+          "status_code": 200,
+          "deducted_amount": 0.009,
+          "created_at": "2026-10-07T08:29:41.394976Z"
+        }
+      ],
+      "billing_match": "owned credential, API and browser run window",
+      "media_verification": [],
+      "result_fields": [
+        "cost",
+        "organic",
+        "related_searches"
+      ],
+      "organic_result_count": 2,
+      "screenshot": "evidence/google-search-audit.png",
+      "workflow": "evidence/google-search-audit-workflow.json"
+    }
+  ],
+  "primary_blocked": false,
+  "scope_note": "Recorded cases only. Batch regressions reuse earlier paid successful tasks; those media generations are not billed or claimed as new. New paid calls have separate usage reconciliation. Optional untested models/actions are not claimed as passed; original failures and their corrections are preserved."
+}

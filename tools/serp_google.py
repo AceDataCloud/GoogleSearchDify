@@ -22,7 +22,8 @@ class SerpGoogleTool(Tool):
                 "search" == "image"
                 or "search" == "mixed"
                 and any(
-                    ext in url.lower().split("?")[0] for ext in [".png", ".jpg", ".jpeg", ".webp"]
+                    suffix in url.lower().split("?")[0]
+                    for suffix in [".png", ".jpg", ".jpeg", ".webp"]
                 )
             ):
                 yield self.create_image_message(url)

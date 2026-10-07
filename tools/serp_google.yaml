@@ -8,31 +8,36 @@ description:
   human:
     en_US: Get structured Google SERP results via Ace Data Cloud Google SERP API.
     zh_Hans: 通过 Ace Data Cloud Google SERP API 获取结构化 Google 搜索结果。
-  llm: Fetch structured Google search results (search/images/news/maps/places/videos).
+  llm: Get structured Google SERP results via Ace Data Cloud Google SERP API. For
+    asynchronous results, preserve task_id and use the task retrieval tool until completion.
+    A successful submission is not completed output.
 parameters:
 - name: page
   type: number
   required: false
+  form: form
   label:
     en_US: Page
     zh_Hans: 页码
   human_description:
     en_US: Page number. Default is 1.
-    zh_Hans: 页码，默认 1。
+    zh_Hans: 搜索结果的页码，默认为第 1 页。
   llm_description: Page number. Default is 1.
-  form: form
   default: 1
+  min: 1
+  max: 100
 - name: type
   type: select
   required: false
+  form: form
   label:
     en_US: Type
     zh_Hans: 类型
   human_description:
     en_US: Search resource type. Default is search.
-    zh_Hans: 搜索资源类型，默认为 search。
+    zh_Hans: 搜索资源类型参数，目前支持六种类型：`search`（网页搜索）、`images`（图片）、`news`（新闻）、`maps`（地图）、`places`（地点）、`videos`（视频）。默认值为
+      `search`。
   llm_description: Search resource type. Default is search.
-  form: form
   default: search
   options:
   - value: search
@@ -62,25 +67,25 @@ parameters:
 - name: query
   type: string
   required: true
+  form: llm
   label:
     en_US: Query
     zh_Hans: 关键词
   human_description:
     en_US: Search query string.
-    zh_Hans: 搜索关键词。
+    zh_Hans: 搜索查询关键词。
   llm_description: Search query string.
-  form: llm
 - name: range
   type: select
   required: false
+  form: form
   label:
     en_US: Date Range
     zh_Hans: 时间范围
   human_description:
     en_US: Date range constraint of the search results.
-    zh_Hans: 搜索结果的时间范围限制。
+    zh_Hans: 搜索结果的时间范围筛选，默认不限制时间。
   llm_description: Date range constraint of the search results.
-  form: form
   options:
   - value: h
     label:
@@ -125,40 +130,43 @@ parameters:
 - name: number
   type: number
   required: false
+  form: form
   label:
     en_US: Number
     zh_Hans: 数量
   human_description:
     en_US: Number of results per page. Default is 10.
-    zh_Hans: 每页结果数量，默认 10。
+    zh_Hans: 返回的搜索结果数量，默认为 10 条。
   llm_description: Number of results per page. Default is 10.
-  form: form
   default: 3
+  min: 1
+  max: 100
 - name: country
   type: string
   required: false
+  form: form
   label:
     en_US: Country
     zh_Hans: 国家
   human_description:
     en_US: Country code (e.g., US, CN). Default is US.
-    zh_Hans: 国家简写（例如 US、CN），默认 US。
+    zh_Hans: 搜索引擎使用的国家/地区代码，默认为 `US`（美国）。
   llm_description: Country code (e.g., US, CN). Default is US.
-  form: form
 - name: language
   type: string
   required: false
+  form: form
   label:
     en_US: Language
     zh_Hans: 语言
   human_description:
     en_US: Language code (e.g., en, zh-CN). Default is en.
-    zh_Hans: 语言代码（例如 en、zh-CN），默认 en。
+    zh_Hans: 搜索引擎使用的语言代码，默认为 `en`（英语）。
   llm_description: Language code (e.g., en, zh-CN). Default is en.
-  form: form
 - name: image_size
   type: select
   required: false
+  form: form
   label:
     en_US: Image Size
     zh_Hans: 图片大小
@@ -166,7 +174,6 @@ parameters:
     en_US: Set image size.
     zh_Hans: 图片尺寸筛选条件，仅在 `type` 为 `images` 时有效。
   llm_description: Set image size.
-  form: form
   options:
   - value: large
     label:

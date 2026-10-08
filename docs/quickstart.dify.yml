@@ -6,12 +6,7 @@ app:
   mode: workflow
   name: Google Search Step-by-step Tutorial
   use_icon_as_answer_icon: false
-dependencies:
-- current_identifier: null
-  type: marketplace
-  value:
-    marketplace_plugin_unique_identifier: acedatacloud/serp:0.0.1@0d20830952e448de4851d16fc55a5f931316a960c9f57b4c4f64b8b63cb18d2e
-    version: null
+dependencies: []
 kind: app
 version: 0.7.0
 workflow:
@@ -74,7 +69,6 @@ workflow:
       zIndex: 0
     - data:
         desc: ''
-        plugin_unique_identifier: acedatacloud/serp:0.0.1@0d20830952e448de4851d16fc55a5f931316a960c9f57b4c4f64b8b63cb18d2e
         provider_id: acedatacloud/serp/serp
         provider_name: acedatacloud/serp/serp
         provider_type: builtin
